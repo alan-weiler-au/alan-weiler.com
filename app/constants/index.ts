@@ -29,7 +29,7 @@ export const servicesData = [
     },
     {   _id: "04",
         title: "API Development",
-        description: "I can build you an API using Node/Express.js, Next.js or Java Spring depending on your needs an requirements.",
+        description: "I can build you an API or microservices using Node/Express.js, Next.js or Java Spring depending on your needs and requirements.",
         href: "https//www.google.com"
     }
     

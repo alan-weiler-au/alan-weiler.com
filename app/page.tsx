@@ -14,7 +14,7 @@ export default function Home() {
         <div className="flex flex-col items-center md:items-start md:gap-7 text-center md:text-start">
           <div>
             <h3 className="fot semibold tracking-wider mb-1">so<span className="text-lightSky">f</span>twar<span className="text-lightSky">e</span> eng<span className="text-lightSky">i</span>neer</h3>
-            <h2 className="text-3xl md:text-md-5xl mb-2 text-white">hello <span className="text-lightSky">i&apos;m</span></h2>
+            <h2 className="text-3xl md:text-md-5xl mb-2 text-white">hello, my name is</h2>
             <h1 className="text-lightSky text-5xl md:text-7xl tracking-normal">alan_weiler</h1>
             </div>
             <div className="w-full h-[240px] md:h-[200px] relative">
