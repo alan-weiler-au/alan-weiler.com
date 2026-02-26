@@ -5,6 +5,8 @@ import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
 import { Toaster } from "@/components/ui/toaster";
+import { GlobalFxProvider } from "./providers/GlobalFxProvider";
+
 
 
 export const metadata: Metadata = {
@@ -27,12 +29,14 @@ export default function RootLayout({
       <body
         className={`${courierPrime} antialiased text-white bg-bodyColor`}
       >
+      <GlobalFxProvider>
         <Header />
         <StairTransition />
         <PageTransition>
             {children}
           </PageTransition>
         <Toaster />
+        </GlobalFxProvider>
       </body>
     </html>
   );

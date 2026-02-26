@@ -1,6 +1,11 @@
+"use client"
+
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
-import React from 'react'
+import React from 'react';
+import { motion } from 'motion/react';
+import { useGlobalFxControls} from "@/app/providers/GlobalFxProvider"
+
 
 interface Props{
     className?: string;
@@ -9,12 +14,15 @@ interface Props{
 }
 
 const Logo = ({className, title, subtitle} : Props) => {
+
+  const fx = useGlobalFxControls()
+
   return (
     <div className="text-2xl group">
         <Link href={'/'}>
-        <h2 className={cn("font-semibold hover:text-hoverColor hoverEffect", className)}>
-            {title}<span className="text-lightSky group-hover:text-white hoverEffect">{subtitle}</span>
-        </h2>
+        <motion.h2 className={cn("font-semibold hover:text-[var(--fx-color)] hoverEffect", className)} animate={fx}>
+            {title}<motion.span className="text-[var(--fx-color)] group-hover:text-white hoverEffect">{subtitle}</motion.span>
+        </motion.h2>
         </Link>
     </div>
   )
