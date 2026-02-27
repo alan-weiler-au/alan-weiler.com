@@ -1,9 +1,10 @@
 "use client"
 
 import React, { createContext, useContext, useEffect, useMemo } from "react"
-import { AnimationControls, useAnimationControls } from "motion/react"
+import { useAnimationControls } from "motion/react"
 
-const GlobalFxContext = createContext<AnimationControls | null>(null)
+const GlobalFxContext =
+  createContext<ReturnType<typeof useAnimationControls> | null>(null)
 
 export function GlobalFxProvider({ children }: { children: React.ReactNode }) {
   const controls = useAnimationControls()
@@ -18,7 +19,7 @@ export function GlobalFxProvider({ children }: { children: React.ReactNode }) {
 
     // Shake knobs
     const shakeWindow = 0.22
-    const shakeSteps = 16
+    const shakeSteps : number = 16
     const xAmp = 10
     const yAmp = 1.2
     const rotAmp = 0.35
