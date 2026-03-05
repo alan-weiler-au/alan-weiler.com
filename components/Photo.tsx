@@ -42,8 +42,8 @@ const Photo = () => {
             <Image
               src={hero}
               alt="Alan Weiler"
-              width={400}
-              height={400}
+              width={360}
+              height={360}
               quality={100}
               className="object-contain w-full h-full"
             />
@@ -51,7 +51,7 @@ const Photo = () => {
         </motion.div>
 
         <svg
-          className="w-[250px] lg:w-[506px] h-[250px] lg:h-[506px]"
+          className="w-[280px] lg:w-[506px] h-[280px] lg:h-[506px]"
           viewBox="0 0 506 506"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

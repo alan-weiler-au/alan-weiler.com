@@ -35,6 +35,7 @@ export default function RootLayout({
         <PageTransition>
             {children}
           </PageTransition>
+
         <Toaster />
         </GlobalFxProvider>
       </body>

@@ -9,16 +9,22 @@ import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import Link from "next/link";
 import { motion } from "motion/react";
+import SneakyRabbitLogin from "@/components/secret/SneakyRabbitLogin"
+
 import { useGlobalFxControls} from "@/app/providers/GlobalFxProvider"
+import { useState } from 'react'
+import LoginDialog from '@/components/secret/LoginDialog'
+
 
 
 export default function Home() {
 
   const fx = useGlobalFxControls()
+  const [loginOpen, setLoginOpen] = useState(false);
 
   return (
     <div className="bg-bodyColor text-white/8 ">
-      <Container className="py-12 grid grid-cols-1 md:grid-cols-2 gap-10">
+      <Container className="py-6 md:py-8 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
         <div className="flex flex-col items-center md:items-start md:gap-7 text-center md:text-start">
           <div>
             <h3 className="fot semibold tracking-wider mb-1">
@@ -37,10 +43,8 @@ export default function Home() {
             </motion.h1>
           </div>
 
-          <div className="w-full h-[240px] md:h-[200px] relative">
-            <div className="absolute top-0 left-0 w-full h-full my-2">
+          <div className="w-full min-h-[290px] md:min-h-[220px] pt-4 md:pt-0 relative">
               <HomeDescription />
-            </div>
           </div>
 
           <Link href="/resume.pdf" download="resume">
@@ -49,7 +53,7 @@ export default function Home() {
             animate={fx}
             whileTap={{ scale: 0.98 }}
             className="
-              max-sm:mt-40 md:mt-40
+              mt-4 md:mt-6
               !rounded-full
               px-6 py-2
               inline-flex items-center gap-2
@@ -69,7 +73,7 @@ export default function Home() {
       </Button>
           </Link>
 
-          <div className="max-sm:my-3">
+          <div className="mt-4">
             <SocialLinks />
           </div>
 
@@ -77,6 +81,11 @@ export default function Home() {
         </div>
 
         <Photo />
+        <SneakyRabbitLogin
+        onOpenLogin={() => setLoginOpen(true)}
+        size={70}/>
+        <LoginDialog open={loginOpen} setOpen={setLoginOpen} />
+
       </Container>
     </div>
   );
