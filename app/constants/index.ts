@@ -5,8 +5,8 @@ export const navbarData=[
             {title: "Contact", href: "/contact"}]
 
 export const statsData = [
-            {title: "Years of Experience", value: 8, subvalue: ""},
-            {title: "Projects", value: 5, subvalue: ""},
+            {title: "Years of Experience", value: 9, subvalue: ""},
+            {title: "Projects", value: 7, subvalue: ""},
             {title: "Technologies and languages", value: 15, subvalue: "+"},
             {title: "Github commits", value: 500, subvalue:"+" },            
 ]
